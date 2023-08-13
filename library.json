@@ -2,7 +2,7 @@
     "name": "esp-brotli",
     "version": "1.0.0",
     "description": "Google Brotli Compression on the ESP32 using PSRAM.",
-    "keywords": "PSRAM, Compression, Brotli",
+    "keywords": "PSRAM, Compression, Brotli, Google Brotli",
     "repository":
     {
       "type": "git",
