@@ -181,7 +181,6 @@ void BrotliCreateBackwardReferences(size_t num_bytes,
       CASE_(65)
 #undef CASE_
       default:
-        BROTLI_DCHECK(false);
         break;
     }
   }
@@ -197,7 +196,6 @@ void BrotliCreateBackwardReferences(size_t num_bytes,
     FOR_GENERIC_HASHERS(CASE_)
 #undef CASE_
     default:
-      BROTLI_DCHECK(false);
       break;
   }
 }

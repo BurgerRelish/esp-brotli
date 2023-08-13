@@ -149,7 +149,7 @@ static BrotliDecoderErrorCode DecodeWindowBits(BrotliDecoderState* s,
   }
   BrotliTakeBits(br, 3, &n);
   if (n != 0) {
-    s->window_bits = (17u + n) & 63u;
+    s->window_bits = 17 + n;
     return BROTLI_DECODER_SUCCESS;
   }
   BrotliTakeBits(br, 3, &n);
@@ -166,7 +166,7 @@ static BrotliDecoderErrorCode DecodeWindowBits(BrotliDecoderState* s,
     }
   }
   if (n != 0) {
-    s->window_bits = (8u + n) & 63u;
+    s->window_bits = 8 + n;
     return BROTLI_DECODER_SUCCESS;
   }
   s->window_bits = 17;
@@ -2422,7 +2422,7 @@ BrotliDecoderResult BrotliDecoderDecompressStream(
           result = BROTLI_DECODER_NEEDS_MORE_INPUT;
           break;
         }
-        s->window_bits = bits & 63u;
+        s->window_bits = (brotli_reg_t)bits;
         if (s->window_bits < BROTLI_LARGE_MIN_WBITS ||
             s->window_bits > BROTLI_LARGE_MAX_WBITS) {
           result = BROTLI_FAILURE(BROTLI_DECODER_ERROR_FORMAT_WINDOW_BITS);
@@ -2831,7 +2831,7 @@ BrotliDecoderErrorCode BrotliDecoderGetErrorCode(const BrotliDecoderState* s) {
 const char* BrotliDecoderErrorString(BrotliDecoderErrorCode c) {
   switch (c) {
 #define BROTLI_ERROR_CODE_CASE_(PREFIX, NAME, CODE) \
-    case BROTLI_DECODER ## PREFIX ## NAME: return #PREFIX #NAME;
+    case BROTLI_DECODER ## PREFIX ## NAME: return #NAME;
 #define BROTLI_NOTHING_
     BROTLI_DECODER_ERROR_CODES_LIST(BROTLI_ERROR_CODE_CASE_, BROTLI_NOTHING_)
 #undef BROTLI_ERROR_CODE_CASE_

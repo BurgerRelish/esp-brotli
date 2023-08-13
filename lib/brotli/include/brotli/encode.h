@@ -12,9 +12,9 @@
 #ifndef BROTLI_ENC_ENCODE_H_
 #define BROTLI_ENC_ENCODE_H_
 
-#include "port.h"
-#include "shared_dictionary.h"
-#include "types.h"
+#include <../brotli/include/brotli/port.h>
+#include <../brotli/include/brotli/shared_dictionary.h>
+#include <../brotli/include/brotli/types.h>
 
 #if defined(__cplusplus) || defined(c_plusplus)
 extern "C" {
@@ -490,7 +490,7 @@ BROTLI_ENC_EXTRA_API size_t BrotliEncoderGetPreparedDictionarySize(
 /**
  * Gets an encoder library version.
  *
- * Look at BROTLI_MAKE_HEX_VERSION for more information.
+ * Look at BROTLI_VERSION for more information.
  */
 BROTLI_ENC_API uint32_t BrotliEncoderVersion(void);
 
