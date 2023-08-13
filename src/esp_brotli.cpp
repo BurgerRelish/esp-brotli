@@ -3,9 +3,9 @@
 #include "esp_log.h"
 #include "esp_timer.h"
 
-#include "../lib/ps_base64/ps_base64.h"
-#include "../lib/brotli/include/brotli/encode.h"
-#include "../lib/brotli/include/brotli/decode.h"
+#include "ps_base64/ps_base64.h"
+#include "brotli/include/brotli/encode.h"
+#include "brotli/include/brotli/decode.h"
 
 namespace brotli {
 /**
