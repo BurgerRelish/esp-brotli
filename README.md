@@ -1,11 +1,11 @@
-Forked from google/brotli and adapted to run on the ESP32.
+Forked from google/brotli and adapted to run on the ESP32. Uses PSRAM, buffer size can be changed in esp_brotli.h.
 
 ## Usage
 To use, simply call the below functions:
 ```cpp 
 ps::string brotli::compress(ps::string& msg);
 ps::string brotli::decompress(ps::string& msg);
-```cpp
+```
 
 Unit test example:
 ```cpp
@@ -41,4 +41,4 @@ void setup() {
 void loop() {
 
 }
-```cpp
+```
