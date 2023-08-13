@@ -1,3 +1,27 @@
+<p align="center">
+  <img src="https://github.com/google/brotli/actions/workflows/build_test.yml/badge.svg" alt="GitHub Actions Build Status" href="https://github.com/google/brotli/actions?query=branch%3Amaster">
+  <img src="https://oss-fuzz-build-logs.storage.googleapis.com/badges/brotli.svg" alt="Fuzzing Status" href="https://oss-fuzz-build-logs.storage.googleapis.com/index.html#brotli">
+</p>
+<p align="center"><img src="https://brotli.org/brotli.svg" alt="Brotli" width="64"></p>
+
+### Introduction
+
+Brotli is a generic-purpose lossless compression algorithm that compresses data
+using a combination of a modern variant of the LZ77 algorithm, Huffman coding
+and 2nd order context modeling, with a compression ratio comparable to the best
+currently available general-purpose compression methods. It is similar in speed
+with deflate but offers more dense compression.
+
+The specification of the Brotli Compressed Data Format is defined in [RFC 7932](https://tools.ietf.org/html/rfc7932).
+
+Brotli is open-sourced under the MIT License, see the LICENSE file.
+
+> **Please note:** brotli is a "stream" format; it does not contain
+> meta-information, like checksums or uncompresssed data length. It is possible
+> to modify "raw" ranges of the compressed stream and the decoder will not
+> notice that.
+
+## Note
 Forked from google/brotli and adapted to run on the ESP32. Uses PSRAM, buffer size can be changed in esp_brotli.h.
 
 ## Usage
