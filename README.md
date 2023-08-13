@@ -24,6 +24,9 @@ Brotli is open-sourced under the MIT License, see the LICENSE file.
 ## Note
 Forked from google/brotli and adapted to run on the ESP32. Uses PSRAM, buffer size can be changed in esp_brotli.h.
 
+## PIO Dependencies
+- burgerrelish/PSRAM Containers@^1.0.0 (github.com/BurgerRelish/ESP32-PSRAM-STL-Containers)
+
 ## Usage
 To use, simply call the below functions:
 ```cpp 
