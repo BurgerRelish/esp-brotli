@@ -15,6 +15,9 @@
         "email": "wattnicholas8@gmail.com"
       }
     ],
+    "dependencies": {
+      "burgerrelish/PSRAM Containers": "1.0.0"
+    },
     "license": "MIT",
     "frameworks": "arduino",
     "platforms": "esp32"
