@@ -1,20 +1,5 @@
-# C
-*.d
-*.o
-*.obj
-bin/
-buildfiles/
-**/obj/
-dist/
-**/bazel-*
-
-# Python
-__pycache__/
-*.py[cod]
-*.so
-*.egg-info/
-
-# Tests
-*.txt.uncompressed
-*.br
-*.unbr
+.pio
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch
